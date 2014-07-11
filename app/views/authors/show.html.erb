@@ -1,9 +1,9 @@
 <p>Series by 
-<%= Author.get_name(@author) + ' ' %>
+<strong><%= Author.get_name(@author) + ' ' %></strong>
 include the following:
 </p>
-<p>
+<ul class='unstyled'>
 <% @author.series.each do |series| %>
-<%= link_to series.title, series_path(series) %><br/>
+<li><%= link_to series.title, series_path(series) %></li>
 <% end %>
-</p>
+</ul>

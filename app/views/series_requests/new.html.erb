@@ -1,4 +1,11 @@
 <p>Interested in finding the correct reading order of a series that you don't see? Request it here:</p>
+
+<% flash.each do |key, value| %>
+    <div class="<%= flash_class(key) %>">
+        <%= value %>
+    </div>
+<% end %>
+
 <%= form_for @series_request do |f| %>
   <%=f.label :email %>
   <%=f.email_field :email %>

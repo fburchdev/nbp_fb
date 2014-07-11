@@ -1,5 +1,7 @@
 <p>Series listings are available for the following authors:</p>
+<ul class='unstyled'>
 <% @authors.each do |author| %>
 <% author_name = Author.get_name(author) %>
-<%= link_to author_name, author_path(author) %><br/>
+<li><%= link_to author_name, author_path(author) %></li>
 <% end %>
+</ul>

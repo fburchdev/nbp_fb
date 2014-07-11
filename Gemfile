@@ -47,3 +47,6 @@ group :production do
 end
 
 gem 'i18n', '0.6.9'
+
+gem "twitter-bootstrap-rails"
+
