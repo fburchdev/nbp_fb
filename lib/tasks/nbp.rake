@@ -84,6 +84,12 @@ namespace :nbp do
     
   end #end import_book_series
 
-  
+  desc "Export book series from db to json"
+  task export_book_series: :environment do
+    author = Author.all()
+    books_inclusion = {:books => {}}
+    puts author.to_json(:include => {:series => {:include => books_inclusion }})
+    :ok
+  end #end export_book_series
 
 end #end namespace nbp
